@@ -1,0 +1,20 @@
+.search {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem 0;
+    &__icon {
+
+    }
+    &__input {
+
+    }
+    &__image {
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+&--tablet {
+    display: none;
+}
+    }
+}
