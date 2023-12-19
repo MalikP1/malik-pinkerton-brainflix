@@ -21,28 +21,28 @@ $site-main-font: "Avenir";
     font-size: 1.5rem;
     line-height: 2rem;
     @include tablet {
-        font-size: 2.0625rem;
-        line-height: 2.75rem;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
     }
 }
 
 @mixin section-header {
     font-weight: 700;
-    font-size: .75rem;
-    line-height: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     @include tablet {
-        font-size: 2.0625rem;
+        font-size: 2.25rem;
         line-height: 2.75rem;
     }
 }
 
 @mixin subheader {
     font-weight: 700;
-    font-size: .8125rem;
-    line-height: 1.125rem;
+    font-size: .875rem;
+    line-height: 1.375rem;
     @include tablet {
-        font-size: .875rem;
-        line-height: 1.375rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }
 

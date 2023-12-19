@@ -4,12 +4,12 @@
  width: 100%; 
 @include tablet {
     display: flex;
-    
 }
  &__body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url("../../assets/images/upload.svg") no-repeat left;
     @include button;
  }  
 }

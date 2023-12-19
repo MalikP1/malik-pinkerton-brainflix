@@ -1,11 +1,14 @@
-import './App.scss';
+import "./App.scss";
 import Header from "./components/Header/Header";
-// import "./components/Header/Header.scss";
+import Video from "./components/Video/Video";
+import Main from "./components/Main/Main";
 
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
+      <Video />
+      <Main />
     </>
   );
 }
