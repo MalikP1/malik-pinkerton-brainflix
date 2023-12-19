@@ -1,0 +1,96 @@
+@use "./breakpoints" as *;
+@use "./colours" as *;
+@use "./typography" as *;
+
+@mixin container-margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include tablet {
+        margin-left: 2.25rem;
+        margin-right: 2.25rem;
+    }
+    @include desktop {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@mixin padding-above-header {
+padding-top: 1.5rem;
+@include tablet {
+    padding-top: 2.25rem;
+}
+}
+
+@mixin padding {
+    padding: 1rem;
+    @include tablet {
+        padding: 1.5rem;
+    }
+}
+
+@mixin padding-top {
+    padding-top: 1rem;
+    @include tablet {
+        padding-top: 1.5rem;
+    }
+}
+
+@mixin padding-left {
+    padding-left: 1rem;
+    @include tablet {
+        padding-left: 1.5rem;
+    }
+}
+
+@mixin padding-right {
+    padding-right: 1rem;
+    @include tablet {
+        padding-right: 1.5rem;
+    }
+}
+
+@mixin padding-bottom {
+    padding-bottom: 1rem;
+    @include tablet {
+        padding-bottom: 1.5rem;
+    }
+}
+
+@mixin button {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 4px;
+    color: $White;
+    background-color: $BrainFlix-Blue;
+    @include labels-and-buttons;
+    :hover {
+        background-color: $BrainFlix-DarkBlue;
+    }
+    @include tablet {
+        width: 9.375rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@mixin mohan-avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    @include tablet {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+@mixin avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: $Mercury;
+    @include tablet {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}

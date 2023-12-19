@@ -1,11 +1,20 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    @include container-margin;
+    @include padding-top;
+    @include padding-bottom;
+    @include tablet {
+        flex-direction: row;
+    }
     &__link {
 &-image {
-
+height: 1.5625rem;
+width: 7.5rem;
 }
     }
 }
