@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../../assets/images/upload.svg") no-repeat left;
+    background: url("../../assets/images/upload.svg") no-repeat scroll 5px;
     @include button;
  }  
 }

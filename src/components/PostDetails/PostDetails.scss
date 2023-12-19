@@ -1,12 +1,49 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+
 .post-details {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid $Mercury;
 }
 .views {
     display: flex;
-    justify-content: space-evenly;
+    @include padding-top-and-bottom;
+
+    &__analytics {
+        @include padding-left;
+    }
 }
 .likes {
     display: flex;
-    justify-content: space-evenly;
+    @include padding-bottom;
+    &__analytics {
+        @include padding-left;
+    }
+}
+
+.analytics {
+    padding-right: 3rem;
+}
+
+.author__date,
+.views__analytics,
+.likes__analytics {
+    color: $Silver;
+    @include body;
+    margin: 0;
+    // @include padding-bottom;
+}
+
+.author {
+    &__name{
+        color: $BrainFlix-Black;
+        @include subheader;
+        margin: 0;
+        @include padding-top-and-bottom;
+    }
+    &__date {
+        @include padding-bottom;
+    }
 }

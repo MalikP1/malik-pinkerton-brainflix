@@ -36,6 +36,15 @@ padding-top: 1.5rem;
     }
 }
 
+@mixin padding-top-and-bottom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include tablet {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
 @mixin padding-left {
     padding-left: 1rem;
     @include tablet {
@@ -46,6 +55,15 @@ padding-top: 1.5rem;
 @mixin padding-right {
     padding-right: 1rem;
     @include tablet {
+        padding-right: 1.5rem;
+    }
+}
+
+@mixin padding-left-and-right {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include tablet {
+        padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }

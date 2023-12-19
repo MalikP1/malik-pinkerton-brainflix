@@ -3,7 +3,7 @@ import heart from "../../assets/images/likes.svg";
 import "./PostDetails.scss";
 function PostDetails() {
   return (
-    <article className="post-details">
+    <div className="post-details">
       <div className="author">
         <p className="author__name">By Red Crow</p>
         <p className="author__date">07/11/2021</p>
@@ -18,7 +18,7 @@ function PostDetails() {
           <p className="likes__analytics">110,985</p>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
 export default PostDetails;

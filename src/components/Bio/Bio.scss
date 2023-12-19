@@ -1,0 +1,10 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/mixins" as *;
+.bio {
+    @include body;
+    color: $BrainFlix-Black;
+    margin: 0;
+    @include padding-top-and-bottom;
+
+}

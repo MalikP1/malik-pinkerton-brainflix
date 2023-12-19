@@ -9,6 +9,14 @@
 
 @font-face {
     font-family: Avenir;
+    src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+      url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf")
+        format("truetype");
+    font-weight: 600;
+  }
+  
+@font-face {
+    font-family: Avenir;
     src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
     url("../../assets/fonts/Alternative-files/AvenirNextLTPro.ttf") format("truetype");
     font-weight: 400;
@@ -17,17 +25,18 @@
 $site-main-font: "Avenir";
 
 @mixin page-header {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
     @include tablet {
+        font-weight: 700;
         font-size: 3.75rem;
         line-height: 4.25rem;
     }
 }
 
 @mixin section-header {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
     @include tablet {
@@ -37,7 +46,7 @@ $site-main-font: "Avenir";
 }
 
 @mixin subheader {
-    font-weight: 700;
+    font-weight: 600;
     font-size: .875rem;
     line-height: 1.375rem;
     @include tablet {
@@ -57,7 +66,7 @@ $site-main-font: "Avenir";
 }
 
 @mixin labels-and-buttons {
-    font-weight: 700;
+    font-weight: 600;
     font-size: .625rem;
     line-height: 1.25rem;
     @include tablet {
