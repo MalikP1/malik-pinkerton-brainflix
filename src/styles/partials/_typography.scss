@@ -17,7 +17,6 @@
 $site-main-font: "Avenir";
 
 @mixin page-header {
-    font-family: $site-main-font;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -28,7 +27,6 @@ $site-main-font: "Avenir";
 }
 
 @mixin section-header {
-    font-family: $site-main-font;
     font-weight: 700;
     font-size: .75rem;
     line-height: 1.25rem;
@@ -39,7 +37,6 @@ $site-main-font: "Avenir";
 }
 
 @mixin subheader {
-    font-family: $site-main-font;
     font-weight: 700;
     font-size: .8125rem;
     line-height: 1.125rem;
@@ -50,7 +47,6 @@ $site-main-font: "Avenir";
 }
 
 @mixin body {
-    font-family: $site-main-font;
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.125rem;
@@ -61,7 +57,6 @@ $site-main-font: "Avenir";
 }
 
 @mixin labels-and-buttons {
-    font-family: $site-main-font;
     font-weight: 700;
     font-size: .625rem;
     line-height: 1.25rem;

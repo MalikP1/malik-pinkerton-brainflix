@@ -74,6 +74,13 @@ padding-top: 1.5rem;
     }
 }
 
+@mixin input {
+    width: 100%;
+    border-radius: 4px;
+    color: $BrainFlix-Black;
+    background-color: $Alabaster;
+}
+
 @mixin mohan-avatar {
     border-radius: 50%;
     height: 2.25rem;
