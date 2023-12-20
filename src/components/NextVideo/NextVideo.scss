@@ -1,0 +1,40 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/mixins" as *;
+
+.next-video {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: $Silver;
+    margin: 0;
+    @include padding-top-and-bottom;
+    @include subheader;
+  }
+  &-container {
+    @include padding-bottom;
+  }
+  &__image-container {
+    // width: 40%;
+  }
+  &__image {
+    width: 7rem;
+    height: 5rem;
+    border-radius: 4px;
+  }
+  &-container {
+    display: flex;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    @include padding-left;
+    &-title {
+      @include subheader;
+    }
+    &-author {
+      @include body;
+      padding-top: 0.5rem;
+    }
+  }
+}

@@ -1,5 +1,17 @@
 @use "../../styles/partials/colours" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
 
 .video {
   width: 100%;
+  height: auto;
+  background-color: $BrainFlix-DarkBlack;
+  aspect-ratio: 16/9 auto;
+  @include tablet {
+    // @include container-margin;
+    padding: 0 3%;
+  }
+  @include desktop {
+    padding: 0 15%;
+  }
 }

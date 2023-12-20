@@ -4,18 +4,22 @@ import PostDetails from "../PostDetails/PostDetails";
 import Bio from "../Bio/Bio";
 import Conversation from "../Conversation/Conversation";
 import Comments from "../Comments/Comments";
+import NextVideo from "../NextVideo/NextVideo";
 
-function Main({ selectedVideo }) {
+function Main({ selectedVideo, videoList, handleVideoClick }) {
   return (
-    <section className="main">
-      <article className="main__header">
+    <main className="main">
+      <section className="main__body">
         <Title text={selectedVideo.title} />
         <PostDetails details={selectedVideo} />
-      </article>
-      <Bio bio={selectedVideo.description} />
-      <Conversation convo={selectedVideo} />
-      <Comments comments={selectedVideo.comments} />
-    </section>
+        <Bio bio={selectedVideo.description} />
+        <Conversation convo={selectedVideo} />
+        <Comments comments={selectedVideo.comments} />
+      </section>
+      <aside className="main__aside">
+        <NextVideo videos={videoList} handleVideoClick={handleVideoClick} />
+      </aside>
+    </main>
   );
 }
 
