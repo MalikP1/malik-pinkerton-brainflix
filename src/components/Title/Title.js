@@ -1,11 +1,9 @@
 import "./Title.scss";
 
-function Title() {
+function Title({ text }) {
   return (
     <div className="title">
-      <h1 className="title__text">
-        BMX Rampage: 2021 <span className="title__next-line">Highlights</span>
-      </h1>
+      <h1 className="title__text">{text}</h1>
     </div>
   );
 }

@@ -4,34 +4,36 @@
 @use "../../styles/partials/mixins" as *;
 
 .conversation {
-    border-bottom: 1px solid $Mercury;
-    &-container {
-        display: flex;
-    }
-    &__tracker {
-        @include subheader;
-    }
-    &__avatar {
-        @include mohan-avatar;
-    }
-    &__form {
-        @include padding-left;
-        @include padding-bottom;
-    }
-    &__inputs {
-        @include padding-bottom;
-    }
-    &__label {
-        @include body;
-        font-weight: 600;
-        color: $Silver;
-    }
-    &__input {
-        @include input;
-    }
+  border-bottom: 1px solid $Mercury;
+  &-container {
+    display: flex;
+  }
+  &__tracker {
+    @include subheader;
+    margin: 0;
+    @include padding-top-and-bottom;
+  }
+  &__avatar {
+    @include mohan-avatar;
+  }
+  &__form {
+    @include padding-left;
+    @include padding-bottom;
+  }
+  &__inputs {
+    @include padding-bottom;
+  }
+  &__label {
+    @include body;
+    font-weight: 600;
+    color: $Silver;
+  }
+  &__input {
+    @include input;
+  }
 
-    &__button {
-        background: url("../../assets/images/add_comment.svg") no-repeat scroll 5px;
-        @include button;
-    }
+  &__button {
+    background: url("../../assets/images/add_comment.svg") no-repeat scroll 5px;
+    @include button;
+  }
 }

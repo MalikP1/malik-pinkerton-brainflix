@@ -1,10 +1,12 @@
 import MohanImage from "../../assets/images/Mohan-muruge.jpg";
 import "./Conversation.scss";
 
-function Conversation() {
+function Conversation({ convo }) {
   return (
     <article className="conversation">
-      <h4 className="conversation__tracker">3 Comments</h4>
+      <h4 className="conversation__tracker">
+        {convo.comments.length} Comments
+      </h4>
       <div className="conversation-container">
         <div className="conversation__content">
           <img

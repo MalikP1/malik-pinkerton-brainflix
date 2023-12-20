@@ -1,8 +1,7 @@
-import BmxVideo from "../../data/videos.json";
 import "./Video.scss";
 
-function Video() {
-  return <section className="video"></section>;
+function Video({ selectedVideo }) {
+  return <video className="video" poster={selectedVideo.image}></video>;
 }
 
 export default Video;
