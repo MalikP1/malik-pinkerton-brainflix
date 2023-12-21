@@ -2,36 +2,34 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/colours" as *;
 .comments {
-
 }
 .comment {
-    display: flex;
-    width: 100%;
-    @include padding-top-and-bottom;
-    border-bottom: 1px solid $Mercury;
-&__avatar {
-@include avatar;
-}
-&__body {
+  display: flex;
+  @include padding-top-and-bottom;
+  border-bottom: 1px solid $Mercury;
+  &__avatar {
+    @include avatar;
+  }
+  &__body {
     width: 100%;
     @include padding-left;
-}
-&__title {
+  }
+  &__title {
     display: flex;
     justify-content: space-between;
     width: 100%;
     @include padding-bottom;
-}
-&__name,
-&__date,
-&__text {
+  }
+  &__name,
+  &__date,
+  &__text {
     margin: 0;
-}
-&__name {
+  }
+  &__name {
     @include subheader;
-}
-&__date {
+  }
+  &__date {
     @include body;
     color: $Silver;
-}
+  }
 }

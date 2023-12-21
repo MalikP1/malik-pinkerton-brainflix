@@ -35,5 +35,6 @@
   &__button {
     background: url("../../assets/images/add_comment.svg") no-repeat scroll 5px;
     @include button;
+    border: none;
   }
 }

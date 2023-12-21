@@ -1,15 +1,21 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/breakpoints" as *;
 .button {
- width: 100%; 
-@include tablet {
+  width: 100%;
+  @include tablet {
     display: flex;
-}
- &__body {
+    justify-content: end;
+    width: auto;
+  }
+  &__body {
     display: flex;
     align-items: center;
     justify-content: center;
     background: url("../../assets/images/upload.svg") no-repeat scroll 5px;
     @include button;
- }  
+    border: none;
+    @include tablet {
+      margin-right: 1.5rem;
+    }
+  }
 }

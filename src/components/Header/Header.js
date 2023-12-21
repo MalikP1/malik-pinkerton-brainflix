@@ -7,36 +7,38 @@ import "./Search.scss";
 import "./Button.scss";
 function Header() {
   return (
-    <header className="header">
-      <a className="header__link">
-        <img
-          className="header__link-image"
-          src={BrainFlixLogo}
-          alt="BrainFlix logo"
-        />
-      </a>
-      <article className="search">
-        <input
-          className="search__input"
-          type="search"
-          id="search"
-          placeholder="Search"
-        />
-        <img
-          className="search__image"
-          src={MohanImage}
-          alt="Mohan Muruge"
-        ></img>
-      </article>
-      <article className="button">
-        <button className="button__body">UPLOAD</button>
-        <img
-          className="search__image search__image--tablet"
-          src={MohanImage}
-          alt="Mohan Muruge"
-        ></img>
-      </article>
-    </header>
+    <div className="max-width">
+      <header className="header">
+        <a className="header__link">
+          <img
+            className="header__link-image"
+            src={BrainFlixLogo}
+            alt="BrainFlix logo"
+          />
+        </a>
+        <article className="search">
+          <input
+            className="search__input"
+            type="search"
+            id="search"
+            placeholder="Search"
+          />
+          <img
+            className="search__image"
+            src={MohanImage}
+            alt="Mohan Muruge"
+          ></img>
+        </article>
+        <article className="button">
+          <button className="button__body">UPLOAD</button>
+          <img
+            className="search__image search__image--tablet"
+            src={MohanImage}
+            alt="Mohan Muruge"
+          ></img>
+        </article>
+      </header>
+    </div>
   );
 }
 

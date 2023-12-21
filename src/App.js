@@ -7,11 +7,18 @@ import videoSideBar from "./data/sidebar-videos.json";
 import { useState } from "react";
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videoFullDetails[0]);
-  const [videoList, setVideoList] = useState(videoSideBar[1]);
+  const [complexVideoList, setComplexVideoList] = useState(videoFullDetails);
+  const [videoList, setVideoList] = useState(videoSideBar);
 
   const handleVideoClick = (video) => {
-    setSelectedVideo(video);
+    complexVideoList.find((videoMatch) => {
+      videoMatch.id === video.id && setSelectedVideo(videoMatch);
+    });
   };
+
+  const filteredVideos = videoList.filter((videoNoMatch) => {
+    return videoNoMatch.id !== selectedVideo.id;
+  });
 
   return (
     <>
@@ -19,7 +26,7 @@ function App() {
       <Video selectedVideo={selectedVideo} />
       <Main
         selectedVideo={selectedVideo}
-        videoList={videoList}
+        videoList={filteredVideos}
         handleVideoClick={handleVideoClick}
       />
     </>

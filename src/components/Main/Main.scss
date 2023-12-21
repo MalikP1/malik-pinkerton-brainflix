@@ -13,8 +13,8 @@
     display: flex;
   }
   &__aside {
-    height: 100%;
     @include desktop {
+      height: 100%;
       border-left: 1px solid $Mercury;
       padding-left: 1.5rem;
     }

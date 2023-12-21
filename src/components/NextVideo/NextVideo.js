@@ -1,17 +1,19 @@
 import "./NextVideo.scss";
 
 function NextVideo({ videos, handleVideoClick }) {
+  console.log(videos);
   return (
     <article className="next-video">
       <p className="next-video__title">NEXT VIDEOS</p>
-      {/* {videos.map((video) => {
+      {videos.map((video) => {
         return (
-            <div className="next-video-container"
+          <div
+            className="next-video-container"
             key={video.id}
             onClick={() => {
-                handleVideoClick(video);
+              handleVideoClick(video);
             }}
-            >
+          >
             <div className="next-video__image-container">
               <img className="next-video__image" src={video.image}></img>
             </div>
@@ -20,8 +22,8 @@ function NextVideo({ videos, handleVideoClick }) {
               <p className="next-video__text-author">{video.channel}</p>
             </div>
           </div>
-            );
-        })} */}
+        );
+      })}
     </article>
   );
 }
