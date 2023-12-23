@@ -47,12 +47,7 @@
     color: $Silver;
   }
   &__input {
-    @include input;
-    @include body;
-    padding: 0.5rem;
-    height: 2.5rem;
-    border: 1px solid $Mercury;
-    margin-top: 0.5rem;
+    @include form-input;
   }
 
   &__button {
@@ -60,7 +55,7 @@
     @include button;
     border: none;
     @include tablet {
-      margin-top: auto;
+      margin-top: 1.2rem;
       margin-left: 1.5rem;
     }
   }

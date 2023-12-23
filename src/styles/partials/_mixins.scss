@@ -82,7 +82,7 @@
   color: $White;
   background-color: $BrainFlix-Blue;
   @include labels-and-buttons;
-  :hover {
+  &:hover {
     background-color: $BrainFlix-DarkBlue;
   }
   @include tablet {
@@ -104,10 +104,22 @@
   border-radius: 4px;
   color: $BrainFlix-Black;
   background-color: $Alabaster;
-  :active {
-    border: 1px solid $BrainFlix-Blue;
+  height: 2.5rem;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid $Mercury;
+  resize: none;
+  font-family: $site-main-font;
+  @include body;
+  &:focus {
+    outline-color: $BrainFlix-Blue;
   }
+  // &:active {
+  //   border: 2px solid $BrainFlix-Blue;
+  // }
   @include tablet {
+    height: 3.5rem;
+    padding: 1rem;
   }
 }
 
