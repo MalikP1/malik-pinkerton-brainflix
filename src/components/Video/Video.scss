@@ -5,23 +5,11 @@
 .video {
   width: 100%;
   aspect-ratio: 16/9;
+  display: block;
   @include tablet {
-    // @include container-margin;
-    // padding: 0 3%;
+    width: 92%;
   }
   @include desktop {
-    // padding: 0 15%;
-    max-width: 1080px;
-    display: block;
-    margin: 0 auto;
+    max-width: 950px;
   }
-}
-
-.max-width {
-  // background-color: $BrainFlix-DarkBlack;
-  width: 100%;
-  //   @include tablet {
-  //     display: flex;
-  //     justify-content: center;
-  //   }
 }

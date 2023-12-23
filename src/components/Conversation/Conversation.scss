@@ -1,17 +1,27 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/colours" as *;
-@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .conversation {
   border-bottom: 1px solid $Mercury;
+  width: 100%;
   &-container {
     display: flex;
+    width: 100%;
+    @include tablet {
+    }
   }
   &__tracker {
     @include subheader;
     margin: 0;
     @include padding-top-and-bottom;
+  }
+  &__content {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
   }
   &__avatar {
     @include mohan-avatar;
@@ -19,22 +29,39 @@
   &__form {
     @include padding-left;
     @include padding-bottom;
+    width: 100%;
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
   }
   &__inputs {
     @include padding-bottom;
+    width: 100%;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__label {
     @include body;
-    font-weight: 600;
     color: $Silver;
   }
   &__input {
     @include input;
+    @include body;
+    padding: 0.5rem;
+    height: 2.5rem;
+    border: 1px solid $Mercury;
+    margin-top: 0.5rem;
   }
 
   &__button {
     background: url("../../assets/images/add_comment.svg") no-repeat scroll 5px;
     @include button;
     border: none;
+    @include tablet {
+      margin-top: auto;
+      margin-left: 1.5rem;
+    }
   }
 }

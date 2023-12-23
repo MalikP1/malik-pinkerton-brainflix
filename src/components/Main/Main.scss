@@ -6,11 +6,13 @@
   @include container-margin;
   &__body {
     @include desktop {
-      width: 65%;
+      width: 75%;
+      padding-right: 1rem;
     }
   }
   @include desktop {
     display: flex;
+    max-width: 1080px;
   }
   &__aside {
     @include desktop {

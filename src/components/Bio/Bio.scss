@@ -2,9 +2,8 @@
 @use "../../styles/partials/colours" as *;
 @use "../../styles/partials/mixins" as *;
 .bio {
-    @include body;
-    color: $BrainFlix-Black;
-    margin: 0;
-    @include padding-top-and-bottom;
-
+  @include body;
+  color: $BrainFlix-Black;
+  margin: 0;
+  @include padding-top-and-bottom;
 }

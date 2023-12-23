@@ -4,6 +4,13 @@
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/breakpoints" as *;
 
-// .max-width {
-//   width: 100%;
-// }
+.max-width {
+  width: 100%;
+  &-video {
+    background-color: $BrainFlix-DarkBlack;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

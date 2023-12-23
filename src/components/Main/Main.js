@@ -8,18 +8,20 @@ import NextVideo from "../NextVideo/NextVideo";
 
 function Main({ selectedVideo, videoList, handleVideoClick }) {
   return (
-    <main className="main">
-      <section className="main__body">
-        <Title text={selectedVideo.title} />
-        <PostDetails details={selectedVideo} />
-        <Bio bio={selectedVideo.description} />
-        <Conversation convo={selectedVideo} />
-        <Comments comments={selectedVideo.comments} />
-      </section>
-      <aside className="main__aside">
-        <NextVideo videos={videoList} handleVideoClick={handleVideoClick} />
-      </aside>
-    </main>
+    <div className="max-width-main">
+      <main className="main">
+        <section className="main__body">
+          <Title text={selectedVideo.title} />
+          <PostDetails details={selectedVideo} />
+          <Bio bio={selectedVideo.description} />
+          <Conversation convo={selectedVideo} />
+          <Comments comments={selectedVideo.comments} />
+        </section>
+        <aside className="main__aside">
+          <NextVideo videos={videoList} handleVideoClick={handleVideoClick} />
+        </aside>
+      </main>
+    </div>
   );
 }
 

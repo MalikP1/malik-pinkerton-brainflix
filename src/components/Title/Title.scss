@@ -11,4 +11,7 @@
     @include padding-above-header;
     @include padding-bottom;
   }
+  @include tablet {
+    border: none;
+  }
 }

@@ -1,8 +1,8 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/colours" as *;
-.comments {
-}
+@use "../../styles/partials/breakpoints" as *;
+
 .comment {
   display: flex;
   @include padding-top-and-bottom;
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @include padding-bottom;
+    padding-bottom: 1rem;
   }
   &__name,
   &__date,
@@ -31,5 +31,11 @@
   &__date {
     @include body;
     color: $Silver;
+  }
+  &__text {
+    @include body;
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
 }

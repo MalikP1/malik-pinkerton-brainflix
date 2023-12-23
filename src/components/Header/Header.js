@@ -7,7 +7,7 @@ import "./Search.scss";
 import "./Button.scss";
 function Header() {
   return (
-    <div className="max-width">
+    <div className="max-width-header">
       <header className="header">
         <a className="header__link">
           <img

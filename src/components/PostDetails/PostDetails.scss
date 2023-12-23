@@ -1,48 +1,77 @@
 @use "../../styles/partials/colours" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .post-details {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid $Mercury;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $Mercury;
+  @include tablet {
+    padding-bottom: 1rem;
+  }
 }
 .views {
-    display: flex;
-    @include padding-top-and-bottom;
-
-    &__analytics {
-        @include padding-left;
+  display: flex;
+  @include padding-top-and-bottom;
+  @include tablet {
+    padding: 0;
+    align-items: center;
+  }
+  &__analytics {
+    padding-left: 1rem;
+    @include tablet {
+      padding-right: 2rem;
     }
+  }
 }
 .likes {
-    display: flex;
-    @include padding-bottom;
-    &__analytics {
-        @include padding-left;
-    }
+  display: flex;
+  @include padding-bottom;
+  @include tablet {
+    padding: 0;
+    align-items: center;
+  }
+  &__analytics {
+    padding-left: 1rem;
+  }
 }
 
 .analytics {
-    padding-right: 3rem;
+  padding-right: 2rem;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .author__date,
 .views__analytics,
 .likes__analytics {
-    color: $Silver;
-    @include body;
-    margin: 0;
+  color: $Silver;
+  @include body;
+  margin: 0;
 }
 
 .author {
-    &__name{
-        color: $BrainFlix-Black;
-        @include subheader;
-        margin: 0;
-        @include padding-top-and-bottom;
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    color: $BrainFlix-Black;
+    @include subheader;
+    margin: 0;
+    @include padding-top-and-bottom;
+    @include tablet {
+      padding: 0;
     }
-    &__date {
-        @include padding-bottom;
+  }
+  &__date {
+    @include padding-bottom;
+    @include tablet {
+      padding: 0 0 0 2rem;
     }
+  }
 }

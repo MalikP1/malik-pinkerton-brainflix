@@ -7,15 +7,25 @@
   width: 100%;
   @include padding-top;
   @include padding-bottom;
-
-  &__icon {
+  @include tablet {
+    display: flex;
+    padding: 0;
+    justify-content: end;
   }
   &__input {
     margin-right: 1rem;
     background: url("../../assets/images/search.svg") no-repeat scroll 5px;
     @include input;
     padding-left: 30px;
-    outline: none;
+    border: 1px solid $Mercury;
+    @include tablet {
+      width: 250px;
+      height: 2.5rem;
+      background: url("../../assets/images/search.svg") no-repeat scroll 10px;
+      padding-left: 40px;
+      margin-right: 1.5rem;
+      background-color: $Alabaster;
+    }
   }
   &__image {
     @include mohan-avatar;
