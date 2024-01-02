@@ -5,6 +5,8 @@ import Main from "./components/Main/Main";
 import videoFullDetails from "./data/full-video-details.json";
 import videoSideBar from "./data/sidebar-videos.json";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videoFullDetails[0]);
   const [complexVideoList, setComplexVideoList] = useState(videoFullDetails);
@@ -21,7 +23,7 @@ function App() {
   });
 
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <Video selectedVideo={selectedVideo} />
       <Main
@@ -29,7 +31,7 @@ function App() {
         videoList={filteredVideos}
         handleVideoClick={handleVideoClick}
       />
-    </>
+    </BrowserRouter>
   );
 }
 
