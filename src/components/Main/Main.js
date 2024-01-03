@@ -6,8 +6,8 @@ import Conversation from "../Conversation/Conversation";
 import Comments from "../Comments/Comments";
 import NextVideo from "../NextVideo/NextVideo";
 
-function Main({ selectedVideo }) {
-  // videoList, handleVideoClick
+function Main({ selectedVideo, videoList }) {
+  // , handleVideoClick
   return (
     <div className="max-width-main">
       <main className="main">
@@ -19,7 +19,8 @@ function Main({ selectedVideo }) {
           <Comments comments={selectedVideo.comments} />
         </section>
         <aside className="main__aside">
-          {/* <NextVideo videos={videoList} handleVideoClick={handleVideoClick} /> */}
+          <NextVideo videos={videoList} />
+          {/* handleVideoClick={handleVideoClick} */}
         </aside>
       </main>
     </div>

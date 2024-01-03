@@ -3,7 +3,7 @@ import Main from "../../components/Main/Main";
 import videoFullDetails from "../../data/full-video-details.json";
 import videoSideBar from "../../data/sidebar-videos.json";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function Home() {
@@ -39,20 +39,34 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    const fetchDefaultVideo = async () => {
-      try {
-        const response = await axios.get(
-          "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=8a270747-b9dc-4536-9974-c48c3727adeb84e96018-4022-434e-80bf-000ce4cd12b8"
-        );
-        console.log(response.data);
-        setSelectedVideo(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchDefaultVideo();
-  }, []);
+    if (!videoId) {
+      const fetchMainVideo = async () => {
+        try {
+          const response = await axios.get(
+            `https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=8a270747-b9dc-4536-9974-c48c3727adeb84e96018-4022-434e-80bf-000ce4cd12b8`
+          );
+          console.log(response.data);
+          setSelectedVideo(response.data);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchMainVideo();
+    } else {
+      const fetchMainVideo = async () => {
+        try {
+          const response = await axios.get(
+            `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=8a270747-b9dc-4536-9974-c48c3727adeb84e96018-4022-434e-80bf-000ce4cd12b8`
+          );
+          console.log(response.data);
+          setSelectedVideo(response.data);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchMainVideo();
+    }
+  }, [videoId]);
 
   if (!videoList) {
     return <p>Loading video list....</p>;
@@ -67,18 +81,16 @@ function Home() {
   //   });
   // };
 
-  const filteredVideos = videoList.filter((videoNoMatch) => {
-    return videoNoMatch.id !== selectedVideo.id;
-  });
+  // const filteredVideos = videoList.filter((videoNoMatch) => {
+  //   return videoNoMatch.id !== selectedVideo.id;
+  // });
 
+  // filteredVideos
+  // handleVideoClick={handleVideoClick}
   return (
     <>
       <Video selectedVideo={selectedVideo} />
-      <Main
-        selectedVideo={selectedVideo}
-        videoList={filteredVideos}
-        // handleVideoClick={handleVideoClick}
-      />
+      <Main selectedVideo={selectedVideo} videoList={videoList} />
     </>
   );
 }
