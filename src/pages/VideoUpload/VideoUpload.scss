@@ -1,3 +1,82 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/breakpoints" as *;
 @use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.video {
+  @include container-margin;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @include padding-above-header;
+    @include padding-bottom;
+    @include page-header;
+  }
+  &__label {
+    @include body;
+    color: $Silver;
+  }
+  &__image {
+    width: 100%;
+    margin-top: 0.25rem;
+    @include padding-bottom;
+    @include desktop {
+      padding: 0;
+      height: 75%;
+    }
+  }
+  &__input,
+  &__text {
+    @include form-input;
+    @include margin-bottom;
+  }
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    border-top: 1px solid $Mercury;
+    border-bottom: 1px solid $Mercury;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.image-container,
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.image-container {
+  width: 100%;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: 40%;
+  }
+}
+.input-container {
+  width: 100%;
+  @include desktop {
+    margin-left: 1.5rem;
+  }
+}
+.button {
+  display: flex;
+  flex-direction: column-reverse;
+  @include tablet {
+    flex-direction: row;
+  }
+  &__publish {
+    background: url("../../assets/images/upload.svg") no-repeat scroll 5px;
+    @include button;
+    @include margin-bottom;
+  }
+  &__cancel {
+    @include button;
+    background-color: $White;
+    color: $BrainFlix-Blue;
+  }
+}

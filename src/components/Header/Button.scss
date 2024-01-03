@@ -8,12 +8,8 @@
     width: auto;
   }
   &__body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: url("../../assets/images/upload.svg") no-repeat scroll 5px;
     @include button;
-    border: none;
     @include tablet {
       margin-right: 1.5rem;
     }

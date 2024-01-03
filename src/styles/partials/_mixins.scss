@@ -75,6 +75,13 @@
   }
 }
 
+@mixin margin-bottom {
+  margin-bottom: 1rem;
+  @include tablet {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @mixin button {
   height: 2.5rem;
   width: 100%;
@@ -82,6 +89,7 @@
   color: $White;
   background-color: $BrainFlix-Blue;
   @include labels-and-buttons;
+  border: none;
   &:hover {
     background-color: $BrainFlix-DarkBlue;
   }
@@ -97,6 +105,9 @@
   border-radius: 4px;
   color: $BrainFlix-Black;
   background-color: $Alabaster;
+  border: 1px solid $Mercury;
+  font-family: $site-main-font;
+  @include body;
 }
 
 @mixin form-input {
