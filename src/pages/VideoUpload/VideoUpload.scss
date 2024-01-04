@@ -3,7 +3,7 @@
 @use "../../styles/partials/colours" as *;
 @use "../../styles/partials/typography" as *;
 
-.video {
+.upload {
   @include container-margin;
   display: flex;
   flex-direction: column;
