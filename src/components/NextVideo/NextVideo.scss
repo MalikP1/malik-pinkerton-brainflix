@@ -12,6 +12,10 @@
     @include padding-top-and-bottom;
     @include subheader;
   }
+  &__link {
+    text-decoration: none;
+    color: $BrainFlix-Black;
+  }
   &-container {
     @include padding-bottom;
     @include tablet {

@@ -12,7 +12,11 @@ function NextVideo({ videos }) {
       <p className="next-video__title">NEXT VIDEOS</p>
       {videos.map((video) => {
         return (
-          <Link key={video.id} to={`/video/${video.id}`}>
+          <Link
+            className="next-video__link"
+            key={video.id}
+            to={`/video/${video.id}`}
+          >
             <div className="next-video-container">
               <div className="next-video__image-container">
                 <img className="next-video__image" src={video.image}></img>

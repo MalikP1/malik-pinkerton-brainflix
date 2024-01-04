@@ -1,12 +1,13 @@
 import videoPreview from "../../assets/images/Upload-video-preview.jpg";
 import "./VideoUpload.scss";
+import { Link } from "react-router-dom";
 
 function VideoUpload() {
   return (
     <div className="max-width-upload">
-      <main className="video">
-        <h1 className="video__title">Upload Video</h1>
-        <form className="video__form">
+      <main className="upload">
+        <h1 className="upload__title">Upload Video</h1>
+        <form className="upload__form">
           <section className="main-content">
             <article className="image-container">
               <label className="video__label">VIDEO THUMBNAIL</label>
@@ -31,7 +32,9 @@ function VideoUpload() {
           </section>
 
           <article className="button">
-            <button className="button__cancel">CANCEL</button>
+            <Link to="/" className="button__cancel">
+              CANCEL
+            </Link>
             <button className="button__publish">PUBLISH</button>
           </article>
         </form>
