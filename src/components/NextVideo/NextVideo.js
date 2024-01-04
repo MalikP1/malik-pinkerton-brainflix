@@ -2,11 +2,6 @@ import "./NextVideo.scss";
 import { Link } from "react-router-dom";
 
 function NextVideo({ videos }) {
-  // handleVideoClick
-  console.log(videos);
-  // onClick={() => {
-  //   handleVideoClick(video);
-  // }}
   return (
     <article className="next-video">
       <p className="next-video__title">NEXT VIDEOS</p>

@@ -1,7 +1,6 @@
 import "./Comments.scss";
 
 function Comments({ comments }) {
-  console.log(comments[0].name);
   return (
     <section className="comments">
       {comments.map((comment) => {

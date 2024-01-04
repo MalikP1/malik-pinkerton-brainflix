@@ -2,6 +2,10 @@ import MohanImage from "../../assets/images/Mohan-muruge.jpg";
 import "./Conversation.scss";
 
 function Conversation({ convo }) {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    event.target.reset();
+  };
   return (
     <article className="conversation">
       <h4 className="conversation__tracker">
@@ -15,7 +19,7 @@ function Conversation({ convo }) {
             alt="Mohan Muruge"
           ></img>
         </div>
-        <form className="conversation__form">
+        <form onSubmit={handleFormSubmit} className="conversation__form">
           <div className="conversation__inputs">
             <label className="conversation__label">JOIN THE CONVERSATION</label>
             <textarea
