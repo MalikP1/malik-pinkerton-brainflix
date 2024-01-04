@@ -12,6 +12,7 @@ function VideoUpload() {
     if (!formInputs) {
       return;
     }
+    setButtonText("Returning to home page");
     event.target.reset();
     navigate("/");
   };
@@ -68,7 +69,7 @@ function VideoUpload() {
               CANCEL
             </Link>
             <button
-              onClick={() => setButtonText("Returning to home page")}
+              onClick={() => setButtonText("Add video title and description")}
               className="button__publish"
             >
               {buttonText}
