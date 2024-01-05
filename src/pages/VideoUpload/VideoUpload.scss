@@ -7,6 +7,7 @@
   @include container-margin;
   display: flex;
   flex-direction: column;
+  max-width: 1080px;
   &__title {
     @include padding-above-header;
     @include padding-bottom;

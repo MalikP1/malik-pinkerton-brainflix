@@ -14,7 +14,9 @@ function VideoUpload() {
     }
     setButtonText("Returning to home page");
     event.target.reset();
-    navigate("/");
+    setTimeout(() => {
+      navigate("/");
+    }, 500);
   };
 
   const [formInputs, setFormInputs] = useState(null);
