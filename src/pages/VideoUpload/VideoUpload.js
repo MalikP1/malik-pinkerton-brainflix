@@ -28,7 +28,6 @@ function VideoUpload() {
   };
 
   // const [formErrors, setFormErrors] = useState(false)
-  // handle
   return (
     <div className="max-width-upload">
       <main className="upload">
