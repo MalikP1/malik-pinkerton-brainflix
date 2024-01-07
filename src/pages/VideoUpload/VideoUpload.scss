@@ -7,7 +7,7 @@
   @include container-margin;
   display: flex;
   flex-direction: column;
-  max-width: 1080px;
+  max-width: 1020px;
   &__title {
     @include padding-above-header;
     @include padding-bottom;
@@ -15,7 +15,7 @@
   }
   &__label {
     @include body;
-    color: $Silver;
+    color: $Secondary-text;
   }
   &__image {
     width: 100%;
@@ -31,13 +31,27 @@
     @include form-input;
     @include margin-bottom;
   }
+  &__input {
+    height: 2.5rem;
+    @include tablet {
+      height: 3.5rem;
+    }
+  }
+  &__text {
+    @include tablet {
+      height: 4.5rem;
+    }
+    @include desktop {
+      height: 5rem;
+    }
+  }
 }
 .main-content {
   display: flex;
   flex-direction: column;
   @include tablet {
-    border-top: 1px solid $Mercury;
-    border-bottom: 1px solid $Mercury;
+    border-top: 1px solid $Divider-line;
+    border-bottom: 1px solid $Divider-line;
     margin-bottom: 1.5rem;
   }
   @include desktop {
@@ -73,7 +87,7 @@
     flex-direction: row;
   }
   &__publish {
-    background: url("../../assets/images/upload.svg") no-repeat scroll 5px;
+    background: url("../../assets/images/publish.svg") no-repeat scroll 5px;
     @include button;
     @include margin-bottom;
   }
@@ -83,7 +97,7 @@
     align-items: center;
     text-decoration: none;
     @include button;
-    background-color: $White;
-    color: $BrainFlix-Blue;
+    background-color: $Background;
+    color: $Primary-CTA;
   }
 }

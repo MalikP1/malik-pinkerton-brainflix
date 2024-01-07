@@ -12,7 +12,7 @@ function VideoUpload() {
     if (!formInputs) {
       return;
     }
-    setButtonText("Returning to home page");
+    setButtonText("Video Uploaded!");
     event.target.reset();
     setTimeout(() => {
       navigate("/");
@@ -71,7 +71,7 @@ function VideoUpload() {
               CANCEL
             </Link>
             <button
-              onClick={() => setButtonText("Add video title and description")}
+              onClick={() => setButtonText("Add title and description!")}
               className="button__publish"
             >
               {buttonText}

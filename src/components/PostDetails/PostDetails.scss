@@ -6,7 +6,7 @@
 .post-details {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid $Mercury;
+  border-bottom: 1px solid $Divider-line;
   @include tablet {
     padding-bottom: 1rem;
   }
@@ -49,7 +49,7 @@
 .author__date,
 .views__analytics,
 .likes__analytics {
-  color: $Silver;
+  color: $Secondary-text;
   @include body;
   margin: 0;
 }
@@ -60,7 +60,7 @@
     align-items: center;
   }
   &__name {
-    color: $BrainFlix-Black;
+    color: $Primary-text;
     @include subheader;
     margin: 0;
     @include padding-top-and-bottom;

@@ -7,13 +7,13 @@
 .max-width {
   width: 100%;
   &-video {
-    background-color: $BrainFlix-DarkBlack;
+    background-color: $Video-player;
     @include tablet {
       display: flex;
       justify-content: center;
     }
   }
   &-upload {
-    border-top: 1px solid $Mercury;
+    border-top: 1px solid $Divider-line;
   }
 }

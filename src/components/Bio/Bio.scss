@@ -3,7 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 .bio {
   @include body;
-  color: $BrainFlix-Black;
+  color: $Primary-text;
   margin: 0;
   @include padding-top-and-bottom;
 }

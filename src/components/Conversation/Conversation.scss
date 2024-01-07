@@ -4,7 +4,7 @@
 @use "../../styles/partials/breakpoints" as *;
 
 .conversation {
-  border-bottom: 1px solid $Mercury;
+  border-bottom: 1px solid $Divider-line;
   width: 100%;
   &-container {
     display: flex;
@@ -15,7 +15,7 @@
   &__tracker {
     @include subheader;
     margin: 0;
-    @include padding-top-and-bottom;
+    @include padding-bottom;
   }
   &__content {
     @include tablet {
@@ -44,7 +44,7 @@
   }
   &__label {
     @include body;
-    color: $Silver;
+    color: $Secondary-text;
   }
   &__input {
     @include form-input;

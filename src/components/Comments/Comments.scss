@@ -6,7 +6,7 @@
 .comment {
   display: flex;
   @include padding-top-and-bottom;
-  border-bottom: 1px solid $Mercury;
+  border-bottom: 1px solid $Divider-line;
   &__avatar {
     @include avatar;
   }
@@ -30,7 +30,7 @@
   }
   &__date {
     @include body;
-    color: $Silver;
+    color: $Secondary-text;
   }
   &__text {
     @include body;

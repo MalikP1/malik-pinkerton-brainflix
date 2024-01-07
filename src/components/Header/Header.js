@@ -1,11 +1,7 @@
 import BrainFlixLogo from "../../assets/images/BrainFlix-logo.svg";
-import SearchIcon from "../../assets/images/search.svg";
 import MohanImage from "../../assets/images/Mohan-muruge.jpg";
-import Upload from "../../assets/images/upload.svg";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.scss";
-import "./Search.scss";
-import "./Button.scss";
 function Header() {
   const navigate = useNavigate();
 

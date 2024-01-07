@@ -4,7 +4,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .title {
-  border-bottom: 1px solid $Mercury;
+  border-bottom: 1px solid $Divider-line;
   &__text {
     @include page-header;
     margin: 0;

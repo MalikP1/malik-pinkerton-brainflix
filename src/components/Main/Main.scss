@@ -12,12 +12,12 @@
   }
   @include desktop {
     display: flex;
-    max-width: 1080px;
+    max-width: 1020px;
   }
   &__aside {
     @include desktop {
       height: 100%;
-      border-left: 1px solid $Mercury;
+      border-left: 1px solid $Divider-line;
       padding-left: 1.5rem;
     }
   }

@@ -86,12 +86,12 @@
   height: 2.5rem;
   width: 100%;
   border-radius: 4px;
-  color: $White;
-  background-color: $BrainFlix-Blue;
+  color: $Background;
+  background-color: $Primary-CTA;
   @include labels-and-buttons;
   border: none;
   &:hover {
-    background-color: $BrainFlix-DarkBlue;
+    background-color: $CTA-hover-state;
   }
   @include tablet {
     width: 9.375rem;
@@ -103,9 +103,9 @@
 @mixin input {
   width: 100%;
   border-radius: 4px;
-  color: $BrainFlix-Black;
-  background-color: $Alabaster;
-  border: 1px solid $Mercury;
+  color: $Primary-text;
+  background-color: $Form-field-background;
+  border: 1px solid $Divider-line;
   font-family: $site-main-font;
   @include body;
 }
@@ -113,21 +113,18 @@
 @mixin form-input {
   width: 100%;
   border-radius: 4px;
-  color: $BrainFlix-Black;
-  background-color: $Alabaster;
-  height: 2.5rem;
+  color: $Primary-text;
+  background-color: $Form-field-background;
+  height: 4.5rem;
   padding: 0.75rem;
   margin-top: 0.25rem;
-  border: 1px solid $Mercury;
+  border: 1px solid $Divider-line;
   resize: none;
   font-family: $site-main-font;
   @include body;
   &:focus {
-    outline-color: $BrainFlix-Blue;
+    outline-color: $CTA-hover-state;
   }
-  // &:active {
-  //   border: 2px solid $BrainFlix-Blue;
-  // }
   @include tablet {
     height: 3.5rem;
     padding: 1rem;
@@ -148,7 +145,7 @@
   border-radius: 50%;
   height: 2.25rem;
   width: 2.25rem;
-  background-color: $Mercury;
+  background-color: $Divider-line;
   @include tablet {
     height: 2.5rem;
     width: 2.5rem;
