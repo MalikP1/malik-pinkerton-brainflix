@@ -2,17 +2,26 @@ import videoPreview from "../../assets/images/Upload-video-preview.jpg";
 import "./VideoUpload.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
+
+const url = process.env.REACT_APP_BASE_URL;
 
 function VideoUpload() {
   const navigate = useNavigate();
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formInputs);
     if (!formInputs) {
       return;
     }
     setButtonText("Video Uploaded!");
+    const newPost = {
+      title: formInputs.input,
+      description: formInputs.textArea,
+    };
+
+    await axios.post(`${url}/videos`, newPost);
+
     event.target.reset();
     setTimeout(() => {
       navigate("/");
