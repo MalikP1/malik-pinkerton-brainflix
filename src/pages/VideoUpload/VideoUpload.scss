@@ -16,28 +16,27 @@
   &__label {
     @include body;
     color: $Secondary-text;
+    text-transform: uppercase;
   }
   &__image {
     width: 100%;
     margin-top: 0.25rem;
+    border-radius: 4px;
     @include padding-bottom;
     @include desktop {
       padding: 0;
-      height: 75%;
+      object-fit: cover;
     }
   }
-  &__input,
+
+  &__input {
+    @include form-input;
+    @include margin-bottom;
+    height: 2.5rem;
+  }
   &__text {
     @include form-input;
     @include margin-bottom;
-  }
-  &__input {
-    height: 2.5rem;
-    @include tablet {
-      height: 3.5rem;
-    }
-  }
-  &__text {
     @include tablet {
       height: 4.5rem;
     }
@@ -56,26 +55,26 @@
   }
   @include desktop {
     flex-direction: row;
+    align-items: baseline;
   }
 }
 
-.image-container,
-.input-container {
-  display: flex;
-  flex-direction: column;
-}
 .image-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   @include tablet {
     width: 50%;
     padding-top: 1.5rem;
   }
   @include desktop {
-    width: 40%;
+    width: 53%;
   }
 }
 .input-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   @include desktop {
     margin-left: 1.5rem;
   }
@@ -88,6 +87,7 @@
   }
   &__publish {
     background: url("../../assets/images/publish.svg") no-repeat scroll 5px;
+    text-transform: uppercase;
     @include button;
     @include margin-bottom;
   }
@@ -96,6 +96,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    text-transform: uppercase;
     @include button;
     background-color: $Background;
     color: $Primary-CTA;

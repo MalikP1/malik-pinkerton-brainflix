@@ -4,7 +4,7 @@ import PostDetails from "../PostDetails/PostDetails";
 import Bio from "../Bio/Bio";
 import Conversation from "../Conversation/Conversation";
 import Comments from "../Comments/Comments";
-import NextVideo from "../NextVideo/NextVideo";
+import NextVideos from "../NextVideos/NextVideos";
 
 function Main({ selectedVideo, videoList }) {
   return (
@@ -18,7 +18,7 @@ function Main({ selectedVideo, videoList }) {
           <Comments comments={selectedVideo.comments} />
         </section>
         <aside className="main__aside">
-          <NextVideo videos={videoList} />
+          <NextVideos videos={videoList} />
         </aside>
       </main>
     </div>

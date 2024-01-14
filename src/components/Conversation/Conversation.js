@@ -21,13 +21,13 @@ function Conversation({ convo }) {
         </div>
         <form onSubmit={handleFormSubmit} className="conversation__form">
           <div className="conversation__inputs">
-            <label className="conversation__label">JOIN THE CONVERSATION</label>
+            <label className="conversation__label">Join the conversation</label>
             <textarea
               className="conversation__input"
               placeholder="Add a new comment"
             ></textarea>
           </div>
-          <button className="conversation__button">COMMENT</button>
+          <button className="conversation__button">Comment</button>
         </form>
       </div>
     </article>

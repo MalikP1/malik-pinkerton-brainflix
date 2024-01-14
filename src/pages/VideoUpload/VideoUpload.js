@@ -11,7 +11,7 @@ function VideoUpload() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    if (!formInputs) {
+    if (!formInputs.input || !formInputs.textArea) {
       return;
     }
     setButtonText("Video Uploaded!");
@@ -29,7 +29,7 @@ function VideoUpload() {
   };
 
   const [formInputs, setFormInputs] = useState(null);
-  const [buttonText, setButtonText] = useState("PUBLISH");
+  const [buttonText, setButtonText] = useState("Publish");
 
   const handleFormChange = (event) => {
     const { name, value } = event.target;
@@ -44,7 +44,7 @@ function VideoUpload() {
         <form onSubmit={handleFormSubmit} className="upload__form">
           <section className="main-content">
             <article className="image-container">
-              <label className="upload__label">VIDEO THUMBNAIL</label>
+              <label className="upload__label">Video thumbnail</label>
               <img
                 className="upload__image"
                 src={videoPreview}
@@ -53,7 +53,7 @@ function VideoUpload() {
             </article>
             <article className="input-container">
               <label className="upload__label">
-                TITLE YOUR VIDEO
+                Title your video
                 <input
                   onChange={handleFormChange}
                   className="upload__input"
@@ -63,7 +63,7 @@ function VideoUpload() {
               </label>
 
               <label className="upload__label">
-                ADD A VIDEO DESCRIPTION
+                Add a video description
                 <textarea
                   onChange={handleFormChange}
                   className="upload__text"
@@ -76,7 +76,7 @@ function VideoUpload() {
 
           <article className="button">
             <Link to="/" className="button__cancel">
-              CANCEL
+              Cancel
             </Link>
             <button
               onClick={() => setButtonText("Add title and description!")}

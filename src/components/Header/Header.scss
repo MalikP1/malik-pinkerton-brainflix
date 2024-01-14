@@ -71,6 +71,11 @@
   &__body {
     background: url("../../assets/images/upload.svg") no-repeat scroll 5px;
     @include button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
     @include tablet {
       margin-right: 1.5rem;
     }

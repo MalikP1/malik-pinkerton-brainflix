@@ -20,6 +20,9 @@
   }
   &__analytics {
     padding-left: 1rem;
+    color: $Secondary-text;
+    @include body;
+    margin: 0;
     @include tablet {
       padding-right: 2rem;
     }
@@ -33,6 +36,9 @@
     align-items: center;
   }
   &__analytics {
+    color: $Secondary-text;
+    @include body;
+    margin: 0;
     padding-left: 1rem;
   }
 }
@@ -44,14 +50,6 @@
     align-items: center;
     padding: 0;
   }
-}
-
-.author__date,
-.views__analytics,
-.likes__analytics {
-  color: $Secondary-text;
-  @include body;
-  margin: 0;
 }
 
 .author {
@@ -69,6 +67,9 @@
     }
   }
   &__date {
+    color: $Secondary-text;
+    @include body;
+    margin: 0;
     @include padding-bottom;
     @include tablet {
       padding: 0 0 0 2rem;

@@ -45,6 +45,7 @@
   &__label {
     @include body;
     color: $Secondary-text;
+    text-transform: uppercase;
   }
   &__input {
     @include form-input;
@@ -54,6 +55,7 @@
     background: url("../../assets/images/add_comment.svg") no-repeat scroll 5px;
     @include button;
     border: none;
+    text-transform: uppercase;
     @include tablet {
       margin-top: 1.2rem;
       margin-left: 1.5rem;

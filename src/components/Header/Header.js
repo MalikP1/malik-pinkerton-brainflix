@@ -1,14 +1,8 @@
 import BrainFlixLogo from "../../assets/images/BrainFlix-logo.svg";
 import MohanImage from "../../assets/images/Mohan-muruge.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 function Header() {
-  const navigate = useNavigate();
-
-  const clickHandler = () => {
-    navigate("/videoUpload");
-  };
-
   return (
     <div className="max-width-header">
       <header className="header">
@@ -33,9 +27,9 @@ function Header() {
           ></img>
         </article>
         <article className="button">
-          <button onClick={clickHandler} className="button__body">
-            UPLOAD
-          </button>
+          <Link to="/videoUpload" className="button__body">
+            upload
+          </Link>
           <img
             className="search__image search__image--tablet"
             src={MohanImage}

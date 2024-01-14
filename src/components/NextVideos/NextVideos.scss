@@ -3,12 +3,13 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/breakpoints" as *;
 
-.next-video {
+.next-videos {
   display: flex;
   flex-direction: column;
   &__title {
     color: $Secondary-text;
     margin: 0;
+    text-transform: uppercase;
     @include padding-top-and-bottom;
     @include subheader;
   }
