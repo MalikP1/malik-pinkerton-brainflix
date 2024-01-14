@@ -20,19 +20,18 @@
     width: 100%;
     padding-bottom: 1rem;
   }
-  &__name,
-  &__date,
-  &__text {
-    margin: 0;
-  }
+
   &__name {
+    margin: 0;
     @include subheader;
   }
   &__date {
+    margin: 0;
     @include body;
     color: $Secondary-text;
   }
   &__text {
+    margin: 0;
     @include body;
     @include desktop {
       padding-right: 1rem;
