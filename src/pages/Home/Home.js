@@ -42,32 +42,6 @@ function Home() {
     return <p>Loading video list....</p>;
   }
 
-  // const getDefaultVideo = `${url}/videos/${videoList[0].id}`;
-
-  // useEffect(() => {
-  //   if (!videoId) {
-  //     const fetchMainVideo = async () => {
-  //       try {
-  //         const response = await axios.get(getDefaultVideo);
-  //         setSelectedVideo(response.data);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     };
-  //     fetchMainVideo();
-  //   } else {
-  //     const fetchMainVideo = async () => {
-  //       try {
-  //         const response = await axios.get(`${url}/videos/${videoId}`);
-  //         setSelectedVideo(response.data);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     };
-  //     fetchMainVideo();
-  //   }
-  // }, [videoId]);
-
   if (!selectedVideo) {
     return <p>Loading selected video....</p>;
   }
